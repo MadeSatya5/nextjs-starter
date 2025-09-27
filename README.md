@@ -57,6 +57,44 @@ A modern **Next.js** starter template with **TypeScript**, **TailwindCSS**, **Sh
 Clone the repository:
 
 ```bash
-git clone <repo-url>
+git clone [<repo-url>](https://github.com/MadeSatya5/nextjs-starter)
 cd nextjs-starter
 ```
+
+##📂 Recommended Folder Structure
+.
+├── public/              # Static assets
+├── src/
+│   ├── components/      # UI components
+│   ├── pages/           # Next.js pages
+│   ├── styles/          # Tailwind/CSS styles
+│   ├── utils/           # Helper functions
+│   ├── hooks/           # Custom hooks
+│   ├── store/           # Zustand store
+│   └── types/           # TypeScript type definitions
+├── .eslintrc.js         # ESLint config
+├── .prettierrc          # Prettier config
+├── tailwind.config.js   # TailwindCSS config
+├── postcss.config.js    # PostCSS config
+├── tsconfig.json        # TypeScript config
+└── package.json
+
+
+## 📜 Scripts
+
+| Script               | Description |
+|----------------------|-------------|
+| `pnpm dev`          | Start development server |
+| `pnpm build`        | Build the project |
+| `pnpm postbuild`    | Run sitemap generation with `next-sitemap` |
+| `pnpm start`        | Start production server |
+| `pnpm lint`         | Run ESLint to check code quality |
+| `pnpm lint:fix`     | Automatically fix linting issues |
+| `pnpm lint:strict`  | Run ESLint with no warnings allowed |
+| `pnpm format`       | Run Prettier to format all files |
+| `pnpm format:check` | Check formatting without writing changes |
+| `pnpm format:write` | Format code and fix linting issues |
+| `pnpm fix`          | Run both format and lint fixes |
+| `pnpm typecheck`    | Run TypeScript type checking |
+| `pnpm prepare`      | Install Husky Git hooks |
+
