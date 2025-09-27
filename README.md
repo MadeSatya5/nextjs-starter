@@ -57,7 +57,7 @@ A modern **Next.js** starter template with **TypeScript**, **TailwindCSS**, **Sh
 Clone the repository:
 
 ```bash
-git clone [<repo-url>](https://github.com/MadeSatya5/nextjs-starter)
+git clone https://github.com/MadeSatya5/nextjs-starter
 cd nextjs-starter
 ```
 
