@@ -61,8 +61,26 @@ git clone [<repo-url>](https://github.com/MadeSatya5/nextjs-starter)
 cd nextjs-starter
 ```
 
-##📂 Recommended Folder Structure
-<pre> ```plaintext . ├── public/ # Static assets ├── src/ │ ├── components/ # UI components │ ├── pages/ # Next.js pages │ ├── styles/ # Tailwind/CSS styles │ ├── utils/ # Helper functions │ ├── hooks/ # Custom hooks │ ├── store/ # Zustand store │ └── types/ # TypeScript type definitions ├── .eslintrc.js # ESLint config ├── .prettierrc # Prettier config ├── tailwind.config.js # TailwindCSS config ├── postcss.config.js # PostCSS config ├── tsconfig.json # TypeScript config └── package.json ``` </pre>
+## 📁 Recommended Folder Structure
+
+```plaintext
+.
+├── public/              # Static assets
+├── src/
+│   ├── components/      # UI components
+│   ├── pages/           # Next.js pages
+│   ├── styles/          # Tailwind/CSS styles
+│   ├── utils/           # Helper functions
+│   ├── hooks/           # Custom hooks
+│   ├── store/           # Zustand store
+│   └── types/           # TypeScript type definitions
+├── .eslintrc.js         # ESLint config
+├── .prettierrc          # Prettier config
+├── tailwind.config.js   # TailwindCSS config
+├── postcss.config.js    # PostCSS config
+├── tsconfig.json        # TypeScript config
+└── package.json
+```
 
 
 ## 📜 Scripts
