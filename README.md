@@ -1,36 +1,190 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+📦 Next.js Starter Pack
 
-## Getting Started
+This is a modern Next.js starter template with TypeScript, TailwindCSS, Shadcn UI, Radix UI, and developer-friendly tools pre-configured for rapid development.
 
-First, run the development server:
+🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
+This starter comes with:
+
+Core
+
+Next.js
+(v15) — Modern React framework for SSR/SSG.
+
+TypeScript
+— Typed JavaScript.
+
+TailwindCSS
+— Utility-first CSS framework.
+
+PostCSS
+
+- Autoprefixer
+  — CSS optimizations.
+
+tw-animate-css
+— Tailwind animations.
+
+UI
+
+Shadcn UI
+— Modern component library.
+
+Radix UI
+— Accessible headless UI components.
+
+Lucide React
+— Modern icon library.
+
+Tailwind Merge
+& Clsx
+— CSS class merging tools.
+
+Cmdk
+— Command palette component.
+
+Recharts
+— Charting library.
+
+Sonner
+— Toast notifications.
+
+State & Data
+
+Zustand
+— State management.
+
+React Query
+— Data fetching and caching.
+
+Zod
+— Schema validation.
+
+Immer
+— Immutable state updates.
+
+Forms
+
+React Hook Form
+— Form handling library.
+
+@hookform/resolvers
+— Validation integration.
+
+Input OTP
+— OTP input component.
+
+Utilities
+
+Axios
+— HTTP client.
+
+Date-fns
+— Date manipulation library.
+
+Universal Cookie
+— Cookie management.
+
+Vaul
+— State persistence.
+
+Development Tools
+
+ESLint & Prettier — Code linting and formatting.
+
+Husky & lint-staged — Git hooks and pre-commit checks.
+
+Commitlint — Enforce commit message style.
+
+Type definitions for Node.js & React.
+
+⚙ Installation
+
+Clone the repo:
+
+git clone <repo-url>
+cd nextjs-starter
+
+Install dependencies:
+
+pnpm install
+
+Run the development server:
+
 pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build the project:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+pnpm build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Start production server:
 
-## Learn More
+pnpm start
 
-To learn more about Next.js, take a look at the following resources:
+📂 Recommended Folder Structure
+.
+├── public/ # Static assets (images, fonts, icons, etc.)
+├── src/
+│ ├── components/ # UI components
+│ ├── pages/ # Next.js pages
+│ ├── styles/ # Tailwind/CSS styles
+│ ├── utils/ # Helper functions
+│ ├── hooks/ # Custom hooks
+│ ├── store/ # Zustand store
+│ └── types/ # TypeScript type definitions
+├── .eslintrc.js # ESLint config
+├── .prettierrc # Prettier config
+├── tailwind.config.js # TailwindCSS config
+├── postcss.config.js # PostCSS config
+├── tsconfig.json # TypeScript config
+└── package.json
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+📦 Scripts
+Script Description
+pnpm dev Start development server
+pnpm build Build project
+pnpm start Start production server
+pnpm lint Run ESLint
+pnpm lint:fix Lint & auto-fix issues
+pnpm format Run Prettier formatting
+pnpm format:check Check formatting
+pnpm format:write Format & lint code
+pnpm typecheck Run TypeScript type checking
+pnpm prepare Install Husky hooks
+🛠 Styling
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+TailwindCSS is configured with:
 
-## Deploy on Vercel
+Custom colors
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Animations (tw-animate-css)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Dark mode support
+
+CSS variables
+
+📚 Documentation
+
+Next.js: https://nextjs.org/docs
+
+TailwindCSS: https://tailwindcss.com/docs
+
+Shadcn UI: https://ui.shadcn.com/docs
+
+Radix UI: https://www.radix-ui.com/docs/primitives/overview/introduction
+
+React Query: https://tanstack.com/query/latest
+
+Zustand: https://zustand-demo.pmnd.rs/
+
+🤝 Contribution
+
+You can improve this starter by adding:
+
+Reusable UI components
+
+Custom hooks
+
+API integrations
+
+Testing tools like Jest or Cypress

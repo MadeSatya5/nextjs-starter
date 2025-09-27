@@ -1,5 +1,5 @@
 // Utility to normalize API base URL and safely join paths
-export const rawBase = process.env.NEXT_PUBLIC_API_URL_DEV ?? '';
+export const rawBase = process.env.NEXT_PUBLIC_API_URL ?? '';
 
 export const baseURL = rawBase.replace(/\/+$/, '');
 
