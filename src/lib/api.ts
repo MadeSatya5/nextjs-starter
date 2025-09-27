@@ -42,7 +42,7 @@ api.interceptors.request.use(function (config) {
         throw 'Api Context not found. You must call `setApiContext(context)` before calling api on server-side';
 
       const cookies = new Cookies(context.req?.headers.cookie);
-      token = cookies.get('conation');
+      token = cookies.get(''); // Change with your token name
     } else {
       token = getToken();
     }
