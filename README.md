@@ -82,22 +82,20 @@ cd nextjs-starter
 └── package.json
 ```
 
-
 ## 📜 Scripts
 
-| Script               | Description |
-|----------------------|-------------|
-| `pnpm dev`          | Start development server |
-| `pnpm build`        | Build the project |
+| Script              | Description                                |
+| ------------------- | ------------------------------------------ |
+| `pnpm dev`          | Start development server                   |
+| `pnpm build`        | Build the project                          |
 | `pnpm postbuild`    | Run sitemap generation with `next-sitemap` |
-| `pnpm start`        | Start production server |
-| `pnpm lint`         | Run ESLint to check code quality |
-| `pnpm lint:fix`     | Automatically fix linting issues |
-| `pnpm lint:strict`  | Run ESLint with no warnings allowed |
-| `pnpm format`       | Run Prettier to format all files |
-| `pnpm format:check` | Check formatting without writing changes |
-| `pnpm format:write` | Format code and fix linting issues |
-| `pnpm fix`          | Run both format and lint fixes |
-| `pnpm typecheck`    | Run TypeScript type checking |
-| `pnpm prepare`      | Install Husky Git hooks |
-
+| `pnpm start`        | Start production server                    |
+| `pnpm lint`         | Run ESLint to check code quality           |
+| `pnpm lint:fix`     | Automatically fix linting issues           |
+| `pnpm lint:strict`  | Run ESLint with no warnings allowed        |
+| `pnpm format`       | Run Prettier to format all files           |
+| `pnpm format:check` | Check formatting without writing changes   |
+| `pnpm format:write` | Format code and fix linting issues         |
+| `pnpm fix`          | Run both format and lint fixes             |
+| `pnpm typecheck`    | Run TypeScript type checking               |
+| `pnpm prepare`      | Install Husky Git hooks                    |
