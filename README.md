@@ -17,18 +17,14 @@ A modern **Next.js** starter template with **TypeScript**, **TailwindCSS**, **Sh
 ### UI
 
 - **[Shadcn UI](https://ui.shadcn.com/)** — Modern component library.
-- **[Radix UI](https://www.radix-ui.com/)** — Accessible headless UI components.
 - **[Lucide React](https://lucide.dev/)** — Modern icon library.
 - **Tailwind Merge** & **Clsx** — Class merging tools.
-- **Cmdk** — Command palette component.
-- **Recharts** — Charting library.
 - **Sonner** — Toast notifications.
 
 ### State & Data
 
 - **[Zustand](https://zustand-demo.pmnd.rs/)** — State management.
 - **[React Query](https://tanstack.com/query/latest)** — Data fetching and caching.
-- **[Zod](https://zod.dev/)** — Schema validation.
 - **Immer** — Immutable state updates.
 
 ### Forms
@@ -40,9 +36,7 @@ A modern **Next.js** starter template with **TypeScript**, **TailwindCSS**, **Sh
 ### Utilities
 
 - **Axios** — HTTP client.
-- **Date-fns** — Date manipulation.
 - **Universal Cookie** — Cookie management.
-- **Vaul** — State persistence.
 
 ### Development Tools
 
