@@ -7,18 +7,24 @@ import Typography from "@/components/Typography";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import InputSelect from "@/components/ui/input-select";
 import { Textarea } from "@/components/ui/textarea";
 
 export default function FormSandbox() {
-  const methods = useForm();
+  const methods = useForm({
+    defaultValues: {
+      "input-text": "",
+      "input-password": "",
+      "input-select": "option-1"
+    },
+  });
+
+  const { handleSubmit } = methods;
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const onSubmit = (data: any) => {
+    console.log(data);
+  };
 
   return (
     <main className="mx-auto min-h-screen max-w-[1200px] items-center justify-center py-20">
@@ -28,30 +34,42 @@ export default function FormSandbox() {
         </Typography>
 
         <FormProvider {...methods}>
-          <form className="mt-8 w-[600px] space-y-8">
-            <div>
+          <form
+            className="mt-8 w-[600px] space-y-8"
+            onSubmit={handleSubmit(onSubmit)}
+          >
+            <div className="flex flex-col gap-5">
               <Typography as="h2" variant="h5" weight="bold">
                 Inputs
               </Typography>
 
-              <Input id="Test" placeholder="Ini placeholder" className="mt-4" />
+              <Input
+                name="input-text"
+                label="Text Input"
+                placeholder="Masukin Text"
+                helperText="*Masukkan text"
+                helperTextClassname="text-red-500"
+              />
+
+              <Input
+                name="input-password"
+                label="Input Password"
+                placeholder="Masukkan Password"
+                type="password"
+              />
             </div>
 
             <div>
-              <Typography as="h2" variant="h5" weight="bold">
+              <Typography as="h2" variant="h5" weight="bold" className="mb-4">
                 Select
               </Typography>
 
-              <Select>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select an option" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="option1">Option 1</SelectItem>
-                  <SelectItem value="option2">Option 2</SelectItem>
-                  <SelectItem value="option3">Option 3</SelectItem>
-                </SelectContent>
-              </Select>
+              <InputSelect
+                name="input-select"
+                options={optionItems}
+                label="Ini Input Select"
+                placeholder="Pilih Options"
+              />
             </div>
 
             <div>
@@ -75,33 +93,31 @@ export default function FormSandbox() {
               </div>
             </div>
 
-            <div>
-              <Typography as="h2" variant="h5" weight="bold">
-                Radio Group
-              </Typography>
-
-              <RadioGroup defaultValue="option1">
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="option1" id="r1" />
-                  <label htmlFor="r1">Option 1</label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="option2" id="r2" />
-                  <label htmlFor="r2">Option 2</label>
-                </div>
-              </RadioGroup>
-            </div>
+            <Button
+              className="mt-12 w-max"
+              type="submit"
+              onClick={() => toast.success("Form submitted!")}
+            >
+              Submit
+            </Button>
           </form>
-
-          <Button
-            className="mt-12 w-max"
-            type="submit"
-            onClick={() => toast.success("Form submitted!")}
-          >
-            Submit
-          </Button>
         </FormProvider>
       </div>
     </main>
   );
 }
+
+const optionItems = [
+  {
+    label: "Option 1",
+    value: "option-1",
+  },
+  {
+    label: "Option 2",
+    value: "option-2",
+  },
+  {
+    label: "Option 3",
+    value: "option-3",
+  },
+];

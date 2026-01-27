@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import clsxm from "@/lib/cn";
+import { cn } from "@/lib/utils";
 
 export enum TypographyVariant {
   h1,
@@ -47,7 +47,7 @@ export default function Typography<T extends React.ElementType>({
   const Component = as || "p";
   return (
     <Component
-      className={clsxm(
+      className={cn(
         // *=============== Font Type ==================
         "text-[#18181B]",
         [
