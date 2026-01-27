@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/cn";
 
 import Typography from "@/components/Typography";
 

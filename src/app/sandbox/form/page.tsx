@@ -5,8 +5,8 @@ import { toast } from "sonner";
 
 import Typography from "@/components/Typography";
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
+import InputCheckbox from "@/components/ui/input-checkbox";
 import InputSelect from "@/components/ui/input-select";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -15,7 +15,7 @@ export default function FormSandbox() {
     defaultValues: {
       "input-text": "",
       "input-password": "",
-      "input-select": "option-1"
+      "input-select": "option-1",
     },
   });
 
@@ -67,17 +67,21 @@ export default function FormSandbox() {
               <InputSelect
                 name="input-select"
                 options={optionItems}
-                label="Ini Input Select"
+                label="Input Select"
                 placeholder="Pilih Options"
               />
             </div>
 
             <div>
-              <Typography as="h2" variant="h5" weight="bold">
+              <Typography as="h2" variant="h5" weight="bold" className="mb-4">
                 Textarea
               </Typography>
 
-              <Textarea placeholder="Enter your message here..." />
+              <Textarea
+                name="message"
+                placeholder="Enter your message here..."
+                label="Your Message"
+              />
             </div>
 
             <div>
@@ -85,12 +89,7 @@ export default function FormSandbox() {
                 Checkbox
               </Typography>
 
-              <div className="flex items-center space-x-2">
-                <Checkbox id="terms" />
-                <label htmlFor="terms" className="text-sm font-medium">
-                  Accept terms and conditions
-                </label>
-              </div>
+              <InputCheckbox name="terms" label="Accept terms and conditions" />
             </div>
 
             <Button

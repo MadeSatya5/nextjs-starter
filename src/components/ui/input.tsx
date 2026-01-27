@@ -8,7 +8,7 @@ import {
 import { IconType } from "react-icons";
 import { HiEye, HiEyeOff } from "react-icons/hi";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/cn";
 
 import HelperText from "@/components/ui/helper-text";
 import LabelText from "@/components/ui/label-text";
