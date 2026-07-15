@@ -44,6 +44,12 @@ A modern **Next.js** starter template with **TypeScript**, **TailwindCSS**, **Sh
 - Husky & lint-staged — Git hooks and pre-commit checks.
 - Commitlint — Enforce commit message style.
 
+### Architecture
+
+- **Feature-based** folder structure — code organized by business domain under `src/features/`.
+- **App Router** — thin page shells in `src/app/` import from feature modules.
+- **Shared primitives** — `src/components/ui/` for shadcn components, `src/lib/` for utilities.
+
 ---
 
 ## ⚙ Installation
@@ -53,26 +59,37 @@ Clone the repository:
 ```bash
 git clone https://github.com/MadeSatya5/nextjs-starter
 cd nextjs-starter
+
+pnpm install
+pnpm prepare   # Install Husky Git hooks
 ```
 
-## 📁 Recommended Folder Structure
+## 📁 Folder Structure
 
 ```plaintext
 .
-├── public/              # Static assets
+├── public/                      # Static assets
 ├── src/
-│   ├── components/      # UI components
-│   ├── pages/           # Next.js pages
-│   ├── styles/          # Tailwind/CSS styles
-│   ├── utils/           # Helper functions
-│   ├── hooks/           # Custom hooks
-│   ├── store/           # Zustand store
-│   └── types/           # TypeScript type definitions
-├── .eslintrc.js         # ESLint config
-├── .prettierrc          # Prettier config
-├── tailwind.config.js   # TailwindCSS config
-├── postcss.config.js    # PostCSS config
-├── tsconfig.json        # TypeScript config
+│   ├── app/                     # Next.js App Router (thin route shells)
+│   ├── features/                # Feature modules (one folder per domain)
+│   │   └── <name>/
+│   │       ├── components/      # Feature-specific components
+│   │       ├── hooks/           # Feature-specific hooks
+│   │       ├── types/           # Feature-specific types
+│   │       ├── api/             # Feature-specific API calls
+│   │       ├── constants/       # Feature-specific constants
+│   │       └── index.ts         # Barrel exports
+│   ├── components/              # Shared UI components
+│   │   └── ui/                  # shadcn primitives (Button, Card, Input, etc.)
+│   ├── hooks/                   # Shared hooks
+│   ├── lib/                     # Shared utilities (cn, api, cookies, url)
+│   ├── styles/                  # Global CSS (Tailwind v4 with @theme)
+│   └── types/                   # Shared TypeScript types
+├── eslint.config.mjs            # ESLint flat config
+├── prettier.config.js           # Prettier config
+├── tsconfig.json                # TypeScript config
+├── commitlint.config.js         # Commit message linting
+├── components.json              # shadcn/ui config
 └── package.json
 ```
 

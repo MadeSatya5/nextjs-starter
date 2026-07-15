@@ -1,19 +1,9 @@
-import { FlatCompat } from "@eslint/eslintrc";
-import js from "@eslint/js";
-import typescriptEslint from "@typescript-eslint/eslint-plugin";
+import nextConfig from "eslint-config-next";
+import typescriptPlugin from "@typescript-eslint/eslint-plugin";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import unusedImports from "eslint-plugin-unused-imports";
+import prettierConfig from "eslint-config-prettier";
 import globals from "globals";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
 
 const eslintConfig = [
   {
@@ -27,16 +17,16 @@ const eslintConfig = [
       "coverage/**",
     ],
   },
-  ...compat.extends(
-    "eslint:recommended",
-    "next",
-    "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended",
-    "prettier"
-  ),
+
+  // Next.js config (react, react-hooks, jsx-a11y, import, @next/next)
+  ...nextConfig,
+
+  // TypeScript recommended rules
+  ...typescriptPlugin.configs["flat/recommended"],
+
+  // Custom rules
   {
     plugins: {
-      "@typescript-eslint": typescriptEslint,
       "simple-import-sort": simpleImportSort,
       "unused-imports": unusedImports,
     },
@@ -108,6 +98,9 @@ const eslintConfig = [
       ],
     },
   },
+
+  // Prettier — must be last to disable conflicting rules
+  prettierConfig,
 ];
 
 export default eslintConfig;
